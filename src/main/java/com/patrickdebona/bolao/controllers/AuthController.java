@@ -55,9 +55,12 @@ public class AuthController {
 
     @GetMapping(value = "/login")
     public String login(){
+        this.isAuthenticated = true;
         if(this.isAuthenticated){
+
             return "index";
         }else{
+
             return "login";
         }
     }
